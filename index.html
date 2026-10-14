@@ -241,6 +241,41 @@
         flex-direction: column;
       }
     }
+
+    @media print {
+      @page {
+        size: A4 portrait;
+        margin: 10mm;
+      }
+      html, body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        background-color: #f7f5ef;
+      }
+      body {
+        zoom: 0.72;
+      }
+      .hero-section {
+        min-height: auto;
+        padding: 110px 40px 40px 40px;
+      }
+      .hero-container {
+        min-height: auto;
+      }
+      .content-section {
+        padding: 40px 40px;
+      }
+      .section-title {
+        break-after: avoid;
+      }
+      .content-section > div,
+      .feature-card {
+        break-inside: avoid;
+      }
+      hr {
+        break-after: avoid;
+      }
+    }
   </style>
 </head>
 <body>
@@ -854,7 +889,7 @@
       </div>
       <div style="flex: 2; font-size: 16px; color: #111111;">
         <p style="margin: 0 0 12px 0; font-weight: 600; color: #111111;">우수 학습그룹 선정</p>
-        <p style="margin: 0 0 8px 0;">- 카카오 MD 담당자 인터뷰를 통해 현업 비즈니스 프로세스 분석 및 요구사항 정의</p>
+        <p style="margin: 0 0 8px 0;">- 지그재그 MD 담당자 인터뷰를 통해 현업 비즈니스 프로세스 분석 및 요구사항 정의</p>
         <p style="margin: 0 0 8px 0;">- 실무 도메인 데이터 구조를 반영한 ERD 설계 및 데이터베이스 아키텍처 체계화</p>
         <p style="margin: 0;">- 설계된 ERD 기반으로 실무자의 업무 효율성을 향상시키는 대시보드 모듈 구현</p>
       </div>
